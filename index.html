@@ -454,7 +454,8 @@
 		a:active,
 		a:focus,
 		a:hover {
-			color: var(--global-palette-highlight-alt);
+			/* color: var(--global-palette-highlight-alt); */
+			color: var(--global-palette-btn-bg);
 			text-underline-offset: .25em
 		}
 
@@ -629,7 +630,7 @@
 		input[type=button]:visited,
 		input[type=submit]:visited {
 			background: var(--global-palette-btn-bg);
-			color: var(--global-palette-btn)
+			color: #063231
 		}
 
 		.button:active,
@@ -647,8 +648,8 @@
 		input[type=submit]:active,
 		input[type=submit]:focus,
 		input[type=submit]:hover {
-			color: var(--global-palette-btn-hover);
-			background: var(--global-palette-btn-bg-hover);
+			color: #063231;
+			background: white;
 			box-shadow: 0 15px 25px -7px rgba(0, 0, 0, .1)
 		}
 
@@ -694,7 +695,7 @@
 		}
 
 		:root .has-theme-palette8-background-color {
-			background-color: var(--global-palette8)
+			background-color: #063231
 		}
 
 		:root .has-theme-palette-9-color {
@@ -734,6 +735,7 @@
 
 		.content-vertical-padding-hide .content-area {
 			margin-top: 0;
+			background: #063231;
 			margin-bottom: 0
 		}
 
@@ -1142,7 +1144,7 @@
 		input[type=submit]:active,
 		input[type=submit]:focus,
 		input[type=submit]:hover {
-			border-color: #2b7ba7;
+			border-color: transparent;
 			box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .15)
 		}
 
@@ -1274,7 +1276,7 @@
 		}
 
 		.site-top-header-wrap .site-header-row-container-inner {
-			background: var(--global-palette6)
+			background: var(--global-palette-btn-bg)
 		}
 
 		.site-top-header-inner-wrap {
@@ -1284,7 +1286,10 @@
 		.site-top-header-wrap .site-header-row-container-inner>.site-container {
 			padding: 6px 20px
 		}
-
+		.site-header-row-container-inner{
+			background: #063231;
+			color: white;
+		}
 		@media all and (max-width:767px) {
 			.site-top-header-wrap .site-header-row-container-inner>.site-container {
 				padding: 5px 10px
@@ -1296,7 +1301,7 @@
 			padding-right: calc(50px / 2);
 			padding-top: 9px;
 			padding-bottom: 9px;
-			color: var(--global-palette5)
+			color: white
 		}
 
 		.main-navigation .primary-menu-container>ul>li.menu-item .dropdown-nav-special-toggle {
@@ -1325,7 +1330,7 @@
 			padding-right: calc(35px / 2);
 			padding-top: 0;
 			padding-bottom: 0;
-			color: var(--global-palette9)
+			color: #063231
 		}
 
 		.secondary-navigation .primary-menu-container>ul>li.menu-item .dropdown-nav-special-toggle {
@@ -1350,7 +1355,7 @@
 		}
 
 		.header-navigation .header-menu-container ul ul.sub-menu {
-			background: var(--global-palette5);
+			background: #063231;
 			box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .1)
 		}
 
@@ -1389,6 +1394,9 @@
 			color: var(--global-palette9);
 			padding: .4em .6em;
 			font-size: 14px
+		}
+		.mobile-toggle-open-container .menu-toggle-open{
+			background: transparent;
 		}
 
 		.mobile-toggle-open-container .menu-toggle-open .menu-toggle-icon {
@@ -1457,7 +1465,7 @@
 		}
 
 		.site-footer .site-middle-footer-wrap a:where(:not(.button):not(.wp-block-button__link):not(.wp-element-button)):hover {
-			color: var(--global-palette2)
+			color: var(--global-palette-btn-bg)
 		}
 
 		.site-middle-footer-inner-wrap {
@@ -3428,6 +3436,7 @@
 			padding: 0;
 			margin: 0;
 			max-width: 100%;
+			filter: brightness(100);
 			height: auto
 		}
 
@@ -3503,6 +3512,7 @@
 
 		.kt-blocks-accordion-header .kt-blocks-accordion-title {
 			word-wrap: break-word;
+			color: #063231;
 			white-space: normal
 		}
 
@@ -3846,7 +3856,8 @@
 		}
 
 		.entry-content blockquote:last-child {
-			margin-bottom: 0
+			margin-bottom: 0;
+			color: #063231;
 		}
 
 		::-webkit-input-placeholder {
@@ -3942,7 +3953,8 @@
 		}
 
 		.main-navigation .primary-menu-container>ul>li.menu-item:last-child>a {
-			padding-right: 0
+			padding-right: 0;
+			color: white !important;
 		}
 
 		#mobile-menu .kadence-menu-icon-side-left.kadence-menu-has-icon .menu-label-icon-wrap,
@@ -4009,7 +4021,7 @@
 
 			.secondary-navigation .secondary-menu-container>ul li.highlight.menu-item>a {
 				font-size: 13px;
-				background: var(--global-palette2);
+				background: var(--global-palette2) !important;
 				padding: 10px 14px
 			}
 
@@ -4057,8 +4069,9 @@
 		.site-middle-footer-wrap .site-footer-row-container-inner::before {
 			content: '';
 			display: block;
-			background: linear-gradient(0deg, rgba(125, 206, 134, 0) 49.5%, var(--global-palette7) 100%), linear-gradient(0deg, rgba(125, 206, 134, .45), rgba(125, 206, 134, .45)), var(--bg-image) no-repeat center/cover;
-			background-blend-mode: normal, overlay, normal;
+			/* background: linear-gradient(0deg, rgba(125, 206, 134, 0) 49.5%, var(--global-palette7) 100%), linear-gradient(0deg, rgba(125, 206, 134, .45), rgba(125, 206, 134, .45)), var(--bg-image) no-repeat center/cover; */
+			/* background-blend-mode: normal, overlay, normal; */
+			background-color: #063231;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -4303,14 +4316,14 @@
 		.service-areas-list .entry-title a {
 			border-radius: 40px;
 			padding: 7px 8px 8px;
-			background-color: var(--global-palette2);
+			background-color: var(--global-palette-btn-bg);
 			display: block;
-			color: #fff;
+			color: #063231;
 			text-align: center
 		}
 
 		.service-areas-list .entry-title a:hover {
-			background-color: var(--global-palette-btn-bg-hover)
+			background-color: white
 		}
 
 		@media screen and (max-width:991px) {
@@ -4347,17 +4360,18 @@
 		}
 
 		.kb-row-layout-id180_f33e24-47 {
-			background-image: url('images/lumina-photo.jpg');
+			/* background-image: url('images/lumina-photo.jpg');
 			background-size: cover;
 			background-position: 50% 50%;
 			background-attachment: scroll;
-			background-repeat: no-repeat
+			background-repeat: no-repeat */
+			background-color: #063231 !important;
 		}
 
 		.kb-row-layout-id180_f33e24-47>.kt-row-layout-overlay {
-			opacity: .34;
-			background-color: var(--global-palette7, #edf2f7);
-			mix-blend-mode: color-dodge
+			opacity: 1;
+			background-color: #063231 !important;
+			/* mix-blend-mode: color-dodge */
 		}
 
 		.kadence-column180_e77377-19>.kt-inside-inner-col {
@@ -4402,7 +4416,11 @@
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_575627-d3,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_575627-d3[data-kb-block=kb-adv-heading180_575627-d3] {
-			margin-bottom: 15px
+			margin-bottom: 15px;
+			color: white;
+		}
+		.single-content h1{
+			color: var(--global-palette-btn-bg);
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_575627-d3 mark.kt-highlight,
@@ -4620,7 +4638,8 @@
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_df4085-70,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_df4085-70[data-kb-block=kb-adv-heading180_df4085-70] {
-			margin-bottom: 15px
+			margin-bottom: 15px;
+			color: white;
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_df4085-70 mark.kt-highlight,
@@ -4837,7 +4856,8 @@
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_826bb1-71,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_826bb1-71[data-kb-block=kb-adv-heading180_826bb1-71] {
-			margin-bottom: 15px
+			margin-bottom: 15px;
+			color: white;
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_826bb1-71 mark.kt-highlight,
@@ -5102,8 +5122,8 @@
 		}
 
 		.kt-info-box180_cf5b90-f7 .kt-blocks-info-box-media {
-			color: var(--global-palette9, #fff);
-			background: var(--global-palette6, #718096);
+			color: #063231;
+			background: white;
 			border-radius: 50px;
 			overflow: hidden;
 			border-top-width: 0;
@@ -5128,7 +5148,7 @@
 		}
 
 		.kt-info-box180_cf5b90-f7 .kt-infobox-textcontent h3.kt-blocks-info-box-title {
-			color: var(--global-palette2, #2b6cb0);
+			color: rgb(0, 208, 130);
 			margin-top: 10px;
 			margin-right: 0;
 			margin-bottom: 18px;
@@ -5136,7 +5156,7 @@
 		}
 
 		.kt-info-box180_cf5b90-f7 .kt-infobox-textcontent .kt-blocks-info-box-text {
-			color: var(--global-palette4, #2d3748)
+			color: white
 		}
 
 		.kadence-column180_967a3f-40>.kt-inside-inner-col {
@@ -5188,8 +5208,8 @@
 		}
 
 		.kt-info-box180_e78efd-68 .kt-blocks-info-box-media {
-			color: var(--global-palette9, #fff);
-			background: var(--global-palette6, #718096);
+			color: #063231;
+			background: white;
 			border-radius: 50px;
 			overflow: hidden;
 			border-top-width: 0;
@@ -5214,7 +5234,7 @@
 		}
 
 		.kt-info-box180_e78efd-68 .kt-infobox-textcontent h3.kt-blocks-info-box-title {
-			color: var(--global-palette2, #2b6cb0);
+			color: rgb(0, 208, 130);
 			margin-top: 10px;
 			margin-right: 0;
 			margin-bottom: 18px;
@@ -5222,7 +5242,7 @@
 		}
 
 		.kt-info-box180_e78efd-68 .kt-infobox-textcontent .kt-blocks-info-box-text {
-			color: var(--global-palette4, #2d3748)
+			color: white
 		}
 
 		.kadence-column180_9c42b9-34>.kt-inside-inner-col {
@@ -5274,8 +5294,8 @@
 		}
 
 		.kt-info-box180_0f62cb-2e .kt-blocks-info-box-media {
-			color: var(--global-palette9, #fff);
-			background: var(--global-palette6, #718096);
+			color: #063231;
+			background: white;
 			border-radius: 50px;
 			overflow: hidden;
 			border-top-width: 0;
@@ -5300,7 +5320,7 @@
 		}
 
 		.kt-info-box180_0f62cb-2e .kt-infobox-textcontent h3.kt-blocks-info-box-title {
-			color: var(--global-palette2, #2b6cb0);
+			color: rgb(0, 208, 130);
 			margin-top: 10px;
 			margin-right: 0;
 			margin-bottom: 18px;
@@ -5308,7 +5328,7 @@
 		}
 
 		.kt-info-box180_0f62cb-2e .kt-infobox-textcontent .kt-blocks-info-box-text {
-			color: var(--global-palette4, #2d3748)
+			color: white
 		}
 
 		.kadence-column180_ce0ae3-b4>.kt-inside-inner-col {
@@ -5360,8 +5380,8 @@
 		}
 
 		.kt-info-box180_8caa83-79 .kt-blocks-info-box-media {
-			color: var(--global-palette9, #fff);
-			background: var(--global-palette6, #718096);
+			color: #063231;
+			background: white;
 			border-radius: 50px;
 			overflow: hidden;
 			border-top-width: 0;
@@ -5386,7 +5406,7 @@
 		}
 
 		.kt-info-box180_8caa83-79 .kt-infobox-textcontent h3.kt-blocks-info-box-title {
-			color: var(--global-palette2, #2b6cb0);
+			color: rgb(0, 208, 130);
 			margin-top: 10px;
 			margin-right: 0;
 			margin-bottom: 18px;
@@ -5394,7 +5414,7 @@
 		}
 
 		.kt-info-box180_8caa83-79 .kt-infobox-textcontent .kt-blocks-info-box-text {
-			color: var(--global-palette4, #2d3748)
+			color: white
 		}
 
 		.kadence-column180_f64912-80>.kt-inside-inner-col {
@@ -5446,8 +5466,8 @@
 		}
 
 		.kt-info-box180_7d1e98-03 .kt-blocks-info-box-media {
-			color: var(--global-palette9, #fff);
-			background: var(--global-palette6, #718096);
+			color: #063231;
+			background: white;
 			border-radius: 50px;
 			overflow: hidden;
 			border-top-width: 0;
@@ -5472,7 +5492,7 @@
 		}
 
 		.kt-info-box180_7d1e98-03 .kt-infobox-textcontent h3.kt-blocks-info-box-title {
-			color: var(--global-palette2, #2b6cb0);
+			color: rgb(0, 208, 130);
 			margin-top: 10px;
 			margin-right: 0;
 			margin-bottom: 18px;
@@ -5480,7 +5500,7 @@
 		}
 
 		.kt-info-box180_7d1e98-03 .kt-infobox-textcontent .kt-blocks-info-box-text {
-			color: var(--global-palette4, #2d3748)
+			color: white
 		}
 
 		.kadence-column180_814f44-b8>.kt-inside-inner-col {
@@ -5525,8 +5545,8 @@
 		}
 
 		.kt-info-box180_92d705-04 .kt-blocks-info-box-media {
-			color: var(--global-palette9, #fff);
-			background: var(--global-palette6, #718096);
+			color: #063231;
+			background: white;
 			border-radius: 50px;
 			overflow: hidden;
 			border-top-width: 0;
@@ -5551,7 +5571,7 @@
 		}
 
 		.kt-info-box180_92d705-04 .kt-infobox-textcontent h3.kt-blocks-info-box-title {
-			color: var(--global-palette2, #2b6cb0);
+			color: rgb(0, 208, 130);
 			margin-top: 10px;
 			margin-right: 0;
 			margin-bottom: 18px;
@@ -5559,7 +5579,7 @@
 		}
 
 		.kt-info-box180_92d705-04 .kt-infobox-textcontent .kt-blocks-info-box-text {
-			color: var(--global-palette4, #2d3748)
+			color: white
 		}
 
 		.kb-row-layout-id180_d5f545-bc>.kt-row-column-wrap {
@@ -5597,7 +5617,8 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_5ffa29-b9,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_5ffa29-b9[data-kb-block=kb-adv-heading180_5ffa29-b9] {
 			margin-bottom: 15px;
-			text-align: center
+			text-align: center;
+			color: white;
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_5ffa29-b9 mark.kt-highlight,
@@ -5609,7 +5630,8 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_bf2531-3b,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_bf2531-3b[data-kb-block=kb-adv-heading180_bf2531-3b] {
 			margin-bottom: 0;
-			text-align: center
+			text-align: center;
+			color: white;
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_bf2531-3b mark.kt-highlight,
@@ -5651,13 +5673,14 @@
 			border-right: 0px solid transparent;
 			border-bottom: 0 solid transparent;
 			border-left: 0 solid transparent;
-			border-top-left-radius: 25px;
+			/* border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
 			border-bottom-right-radius: 25px;
-			border-bottom-left-radius: 25px;
+			border-bottom-left-radius: 25px; */
 			background: var(--global-palette9, #fff);
 			padding-top: 24px;
 			padding-right: 24px;
+			color: #063231;
 			padding-bottom: 24px;
 			padding-left: 24px
 		}
@@ -5667,10 +5690,10 @@
 			border-right: 0px solid;
 			border-bottom: 0 solid;
 			border-left: 0 solid;
-			border-top-left-radius: 25px;
+			/* border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
 			border-bottom-right-radius: 25px;
-			border-bottom-left-radius: 25px;
+			border-bottom-left-radius: 25px; */
 			background: var(--global-palette1, #3182ce);
 			font-size: 24px;
 			line-height: 1.6em;
@@ -5685,7 +5708,7 @@
 
 		.kt-accordion-id180_295745-00:not(.kt-accodion-icon-style-basiccircle):not(.kt-accodion-icon-style-xclosecircle):not(.kt-accodion-icon-style-arrowcircle)>.kt-accordion-inner-wrap>.wp-block-kadence-pane>.kt-accordion-header-wrap .kt-blocks-accordion-icon-trigger:after,
 		.kt-accordion-id180_295745-00:not(.kt-accodion-icon-style-basiccircle):not(.kt-accodion-icon-style-xclosecircle):not(.kt-accodion-icon-style-arrowcircle)>.kt-accordion-inner-wrap>.wp-block-kadence-pane>.kt-accordion-header-wrap .kt-blocks-accordion-icon-trigger:before {
-			background: var(--global-palette9, #fff)
+			background: #063231
 		}
 
 		.kt-accordion-id180_295745-00:not(.kt-accodion-icon-style-basic):not(.kt-accodion-icon-style-xclose):not(.kt-accodion-icon-style-arrow) .kt-blocks-accordion-icon-trigger {
@@ -5737,17 +5760,18 @@
 		}
 
 		.kb-row-layout-id180_4b63fd-df {
-			background-image: url('images/lumina-photo.jpg');
+			/* background-image: url('images/lumina-photo.jpg');
 			background-size: cover;
 			background-position: center center;
 			background-attachment: scroll;
-			background-repeat: no-repeat
+			background-repeat: no-repeat */
+			background-color: #063231;
 		}
 
 		.kb-row-layout-id180_4b63fd-df>.kt-row-layout-overlay {
-			opacity: .45;
-			background-color: var(--global-palette7, #edf2f7);
-			mix-blend-mode: color-dodge
+			opacity: 1;
+			/* background-color: var(--global-palette7, #edf2f7);
+			mix-blend-mode: color-dodge */
 		}
 
 		@media all and (max-width:767px) {
@@ -5815,6 +5839,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_8509c7-8a[data-kb-block=kb-adv-heading180_8509c7-8a] {
 			margin-bottom: 15px
 		}
+		.wp-block-kadence-advancedheading.kt-adv-heading180_8509c7-8a{
+			color: rgb(0, 208, 130) !important;
+		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_8509c7-8a mark.kt-highlight,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_8509c7-8a[data-kb-block=kb-adv-heading180_8509c7-8a] mark.kt-highlight {
@@ -5825,6 +5852,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_23b887-d0,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_23b887-d0[data-kb-block=kb-adv-heading180_23b887-d0] {
 			margin-bottom: 0
+		}
+		.wp-block-kadence-advancedheading.kt-adv-heading180_23b887-d0{
+			color: white;
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_23b887-d0 mark.kt-highlight,
@@ -5837,7 +5867,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_b96883-18[data-kb-block=kb-adv-heading180_b96883-18] {
 			margin-bottom: var(--global-kb-spacing-lg, 3rem)
 		}
-
+		.wp-block-kadence-advancedheading.kt-adv-heading180_b96883-18{
+			color: var(--global-palette-btn-bg);
+		}
 		.wp-block-kadence-advancedheading.kt-adv-heading180_b96883-18 mark.kt-highlight,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_b96883-18[data-kb-block=kb-adv-heading180_b96883-18] mark.kt-highlight {
 			-webkit-box-decoration-break: clone;
@@ -5893,7 +5925,7 @@
 
 		.kt-blocks-testimonials-wrap180_e7cd94-11 .kt-testimonial-item-wrap {
 			box-shadow: 0 0 17px 0 rgba(0, 0, 0, .25);
-			background: #fafafa;
+			background: white;
 			border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
 			border-bottom-right-radius: 25px;
@@ -6047,7 +6079,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_43b61f-b5[data-kb-block=kb-adv-heading180_43b61f-b5] {
 			margin-bottom: 15px
 		}
-
+		.wp-block-kadence-advancedheading.kt-adv-heading180_43b61f-b5{
+			color: white;
+		}
 		.wp-block-kadence-advancedheading.kt-adv-heading180_43b61f-b5 mark.kt-highlight,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_43b61f-b5[data-kb-block=kb-adv-heading180_43b61f-b5] mark.kt-highlight {
 			-webkit-box-decoration-break: clone;
@@ -6057,6 +6091,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_220824-0c,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_220824-0c[data-kb-block=kb-adv-heading180_220824-0c] {
 			margin-bottom: 0
+		}
+		.wp-block-kadence-advancedheading.kt-adv-heading180_220824-0c{
+			color: white;
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading180_220824-0c mark.kt-highlight,
@@ -6163,6 +6200,7 @@
 			border-right: 3px solid var(--global-palette6, #718096);
 			border-bottom: 3px solid var(--global-palette6, #718096);
 			border-left: 3px solid var(--global-palette6, #718096);
+			background-color: var(--global-palette-btn-bg) !important;
 			border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
 			border-bottom-right-radius: 25px;
@@ -6295,6 +6333,7 @@
 			border-right: 3px solid var(--global-palette6, #718096);
 			border-bottom: 3px solid var(--global-palette6, #718096);
 			border-left: 3px solid var(--global-palette6, #718096);
+			background-color: var(--global-palette-btn-bg) !important;
 			border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
 			border-bottom-right-radius: 25px;
@@ -6427,6 +6466,7 @@
 			border-right: 3px solid var(--global-palette6, #718096);
 			border-bottom: 3px solid var(--global-palette6, #718096);
 			border-left: 3px solid var(--global-palette6, #718096);
+			background: var(--global-palette-btn-bg) !important;
 			border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
 			border-bottom-right-radius: 25px;
@@ -6559,6 +6599,7 @@
 			border-right: 3px solid var(--global-palette6, #718096);
 			border-bottom: 3px solid var(--global-palette6, #718096);
 			border-left: 3px solid var(--global-palette6, #718096);
+			background-color: var(--global-palette-btn-bg) !important;
 			border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
 			border-bottom-right-radius: 25px;
@@ -6693,11 +6734,12 @@
 			border-left: 3px solid var(--global-palette6, #718096);
 			border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
+			background-color: var(--global-palette-btn-bg) !important;
 			border-bottom-right-radius: 25px;
 			border-bottom-left-radius: 25px;
 			background: var(--global-palette9, #fff);
 			padding-top: var(--global-kb-spacing-sm, 1.5rem);
-			padding-right: var(--global-kb-spacing-md, 2rem);
+ 			padding-right: var(--global-kb-spacing-md, 2rem);
 			padding-bottom: var(--global-kb-spacing-sm, 1.5rem);
 			padding-left: var(--global-kb-spacing-md, 2rem)
 		}
@@ -6825,6 +6867,7 @@
 			border-left: 3px solid var(--global-palette6, #718096);
 			border-top-left-radius: 25px;
 			border-top-right-radius: 25px;
+			background-color: var(--global-palette-btn-bg) !important;
 			border-bottom-right-radius: 25px;
 			border-bottom-left-radius: 25px;
 			background: var(--global-palette9, #fff);
@@ -7068,7 +7111,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading3588_ee360c-8e[data-kb-block=kb-adv-heading3588_ee360c-8e] {
 			text-align: left
 		}
-
+		.wp-block-kadence-advancedheading.kt-adv-heading3588_ee360c-8e{
+			color: white;
+		}
 		.wp-block-kadence-advancedheading.kt-adv-heading3588_ee360c-8e mark.kt-highlight,
 		.wp-block-kadence-advancedheading.kt-adv-heading3588_ee360c-8e[data-kb-block=kb-adv-heading3588_ee360c-8e] mark.kt-highlight {
 			-webkit-box-decoration-break: clone;
@@ -7463,7 +7508,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading359_a7aad1-1a[data-kb-block=kb-adv-heading359_a7aad1-1a] {
 			margin-bottom: 15px
 		}
-
+		.wp-block-kadence-advancedheading.kt-adv-heading359_a7aad1-1a{
+			color: white;
+		}
 		.wp-block-kadence-advancedheading.kt-adv-heading359_a7aad1-1a mark.kt-highlight,
 		.wp-block-kadence-advancedheading.kt-adv-heading359_a7aad1-1a[data-kb-block=kb-adv-heading359_a7aad1-1a] mark.kt-highlight {
 			-webkit-box-decoration-break: clone;
@@ -7473,6 +7520,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading359_6a4824-63,
 		.wp-block-kadence-advancedheading.kt-adv-heading359_6a4824-63[data-kb-block=kb-adv-heading359_6a4824-63] {
 			margin-bottom: 0
+		}
+		.wp-block-kadence-advancedheading.kt-adv-heading359_6a4824-63{
+			color: white;
 		}
 
 		.wp-block-kadence-advancedheading.kt-adv-heading359_6a4824-63 mark.kt-highlight,
@@ -7726,7 +7776,8 @@
 
 		.kb-row-layout-id180_79f4a2-0e>.kt-row-layout-overlay {
 			opacity: 1;
-			background: linear-gradient(180deg, var(--global-palette9) 0%, rgba(255, 255, 255, 0) 59%, rgba(125, 206, 134, 0) 74.5%, var(--global-palette7) 100%)
+			background-color: #06323160;
+			/* background: linear-gradient(180deg, var(--global-palette9) 0%, rgba(255, 255, 255, 0) 59%, rgba(125, 206, 134, 0) 74.5%, var(--global-palette7) 100%) */
 		}
 
 		@media all and (max-width:1024px) {
@@ -7772,7 +7823,7 @@
 		}
 
 		.kadence-column180_e48b42-17>.kt-inside-inner-col {
-			background-color: rgba(255, 255, 255, .8)
+			background-color: #063231
 		}
 
 		@media all and (max-width:1024px) {
@@ -7821,7 +7872,9 @@
 		.wp-block-kadence-advancedheading.kt-adv-heading180_b1ae83-e7[data-kb-block=kb-adv-heading180_b1ae83-e7] {
 			margin-bottom: 0
 		}
-
+		.wp-block-kadence-advancedheading.kt-adv-heading180_b1ae83-e7{
+			color: white;
+		}
 		.wp-block-kadence-advancedheading.kt-adv-heading180_b1ae83-e7 mark.kt-highlight,
 		.wp-block-kadence-advancedheading.kt-adv-heading180_b1ae83-e7[data-kb-block=kb-adv-heading180_b1ae83-e7] mark.kt-highlight {
 			-webkit-box-decoration-break: clone;
@@ -7953,7 +8006,7 @@
 		}
 
 		:root .has-kb-palette-32-background-color {
-			background-color: #fafafa
+			background-color: #063231
 		}
 
 		.lazyload {
@@ -8704,8 +8757,9 @@
 		}
 
 		.wp-block-kadence-advancedbtn .kb-btn67e7eb-b0.kb-button {
-			color: var(--global-palette9, #fff);
-			background: var(--global-palette2, #2b6cb0);
+			/* color: var(--global-palette9, #fff); */
+			color: #063231;
+			/* background: var(--global-palette2, #2b6cb0); */
 			font-size: 13px;
 			border-top: 0 solid;
 			border-right: 0px solid;
@@ -8776,6 +8830,14 @@
 			padding-right: 0;
 			padding-bottom: 9px;
 			padding-left: 0
+		}
+		body{
+			background: #063231 !important;
+			color: white !important;
+		}
+		.kt-adv-heading180_75dee8-af,.kt-adv-heading180_f5bd76-8f ,.kt-adv-heading180_00a75e-c5 {
+			color: white !important;
+
 		}
 	</style>
 	<link rel="preload" data-rocket-preload="" as="image"
@@ -9650,19 +9712,19 @@
 																		<div class="kt-testimonial-text-wrap">
 																			<div class="kt-testimonial-rating-wrap kt-testimonial-rating-5" role="img" aria-label="5 out of 5 stars">
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-1" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-2" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-3" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-4" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-5" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																			</div>
 																			<div class="kt-testimonial-content-wrap">
@@ -9697,19 +9759,19 @@
 																		<div class="kt-testimonial-text-wrap">
 																			<div class="kt-testimonial-rating-wrap kt-testimonial-rating-5" role="img" aria-label="5 out of 5 stars">
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-1" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-2" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-3" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-4" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-5" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																			</div>
 																			<div class="kt-testimonial-content-wrap">
@@ -9743,19 +9805,19 @@
 																		<div class="kt-testimonial-text-wrap">
 																			<div class="kt-testimonial-rating-wrap kt-testimonial-rating-5" role="img" aria-label="5 out of 5 stars">
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-1" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-2" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-3" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-4" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-5" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																			</div>
 																			<div class="kt-testimonial-content-wrap">
@@ -9789,19 +9851,19 @@
 																		<div class="kt-testimonial-text-wrap">
 																			<div class="kt-testimonial-rating-wrap kt-testimonial-rating-5" role="img" aria-label="5 out of 5 stars">
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-1" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-2" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-3" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-4" aria-hidden="true">
-																					<svg viewBox="0 0 576 512" fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512" fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																				<div class="kt-svg-testimonial-rating-icon kt-svg-testimonial-rating-icon-5" aria-hidden="true">
-																					<svg viewBox="0 0 576 512"fill="currentColor" stroke="currentColor" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
+																					<svg viewBox="0 0 576 512"fill="#063231" stroke="#063231" stroke-width="25" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" height="25" width="25" aria-hidden="true" role="img"> <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"> </path> </svg>
 																				</div>
 																			</div>
 																			<div class="kt-testimonial-content-wrap">
